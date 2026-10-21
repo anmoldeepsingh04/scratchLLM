@@ -13,3 +13,9 @@ It is a open source python-based DL library which is quite flexible and user-fri
 - Typical supervised-learning setup looks like the following picture: 
 
 ![alt text](image.png)
+
+## PyTorch
+Pytorch has the capability to use GPUs for accelerated computing by utilizing parallelism. Depending on the machine and OS, we can have different options. For Mac machines like mine, we can use the MPS. Alternatively, if a GPU isn't present, one can use various cloud platforms that provide free but limited GPU compute.
+
+## Understanding Tensors
+Tensors are a generalization of vectors/matrices to higher dimensions.
