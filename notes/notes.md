@@ -37,3 +37,24 @@
 - The LLM can be built in three stages: 
 
 ![alt text](image-4.png)
+
+## 2. Working with text data
+- Now we will see how to prepare input text for training LLMs. This includes splitting the text into individual word/subword tokens which can be converted into vector representations. We'll see advanced tokenization techniques, like, BPE which is used in GPT.
+- Text is categorical, which means it is qualitative in nature, representing properties which can't be quantified or turned into "numbers", thus, mathematics can't be performed on them. NNs requires numbers to work on them, thus, we transform raw text into continuous valued vectors, on which LLMs can work their magic.
+- The concept of turning categorical data into vectors is called embeddings. We can embed different types of data (audio, video, text, etc.) using a NN layer to another pretrained NN.
+
+![alt text](image-5.png)
+
+- Embedding is a mapping from discrete objects (words, images) to points in a continuous vector space. Thus, converting nonnumeric data into a format that the NNs can process.
+- Many algorithms exist for generating word embeddings, with Word2Vec being the most famous. The main idea behind it is that words that appead in similar contexts tend to have similar meanings. When seen in a 2D projection, these words exist close to each other.
+
+![alt text](image-6.png)
+
+- We can either use a pretrained network to produce embeddings or have the embedding generation as a part of the input layer, which is updated during training. The benefit of using it as a part of the LLM is that the embeddings are optimized for the specific task we're doing.
+- The embedding space is the vector-space where the word embeddings live. It is usually a very high dimensional space, where each coordinate of the embedding represents a certain feature/property (abstract semantic properties) of the corresponding word. Higher the dimension, richer the embedding is, albeit leading to higher computing costs and this dimension scales with the model depth.
+- The process of generating embeddings includes: splitting text into words, turning words into tokens (which could be individual words/subwords/punctuation marks/special characters) and turning tokens into embedding vectors.
+
+![alt text](image-7.png)
+
+- We will be tokenizing the short story "The Verdict" present in [the-verdict.txt](../notebooks/ch2tokenization/the-verdict.txt) into individual words and special characters.
+- We perform an illustrative [splitting](../notebooks/ch2tokenization/02_text_tokenization.ipynb) using the python library re (regular expression), later we will use pre-built tokenizers.
