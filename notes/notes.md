@@ -29,7 +29,7 @@
 
 ![alt text](image-2.png)
 
-- GPT like models use only he decoder to generate text by predicting one word at a time, and are called auto-regressive. An autoregressive model incorporate its previous outputs as inputs for the next prediction. This auto-regressive nature improves the coherence of the resulting text. This property is shown in the following image:
+- GPT like models use only the decoder to generate text by predicting one word at a time, and are called auto-regressive. An autoregressive model incorporate its previous outputs as inputs for the next prediction. This auto-regressive nature improves the coherence of the resulting text. This property is shown in the following image:
 
 ![alt text](image-3.png)
 
