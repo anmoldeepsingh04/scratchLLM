@@ -57,4 +57,7 @@
 ![alt text](image-7.png)
 
 - We will be tokenizing the short story "The Verdict" present in [the-verdict.txt](../notebooks/ch2tokenization/the-verdict.txt) into individual words and special characters.
-- We perform an illustrative [splitting](../notebooks/ch2tokenization/02_text_tokenization.ipynb) using the python library re (regular expression), later we will use pre-built tokenizers.
+- We perform an illustrative splitting using the python library re (regular expression), later we will use pre-built tokenizers.
+- Follow this [notebook](../notebooks/ch2tokenization/02_text_tokenization.ipynb):
+
+## 3. Coding attention mechanisms
