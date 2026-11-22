@@ -61,3 +61,22 @@
 - Follow this [notebook](../notebooks/ch2tokenization/02_text_tokenization.ipynb):
 
 ## 3. Coding attention mechanisms
+In this chapter, we will start implementing the heart of an LLM which enables it to generate coherent text.
+
+![image.png](attachment:image.png)
+
+We will implement four different variants of attention mechanisms that build on each other.
+
+![alt text](image-8.png)
+
+- The main problem with pre-LLM architectures is that they lack an attention mechanisms. Suppose we have to perform a translation task, we can't translate word-to-word between languages because then the grammatical structure is destroyed.
+- To address this issue, we use a deep NN with two submodules: an encoder and a decoder
+- The encoder first processes the entire text, generates a latent representation and the decoder then uses this represenation to produce the translated text.
+- Before transformers, RNNs were the most popular encoder-decoder architectures for language translation. An RNN uses the output from previous step as an input for the current step, which allows it to take into account the previous information, thus making them suitable for sequential data like text.
+- In encoder-decoder RNN, the input text is fed to the encoder which processes it sequentially and updates its hidden state at each state, capturing the entire meaning of the input sentence in the final hidden state. Then the decoder takes the final hidden state to start generating translated sentence while updating its own hidden state at each step which carries the context needed for th next word prediction.
+
+![alt text](image-9.png)
+
+- The big limitation of this architecture is that it can't directly access earlier hidden states, thus, only relying on the current hidden state. This can lead to context loss over complex and long inputs where dependencies might span long distances. So, an RNN needs to remember the entire input into a single hidden state.
+- Self in self-attention refers to the ability of the mechanism to compute the attention weights by relating different positions within a single input sequence. It learns the relationships between various parts of the input.
+- For the next parts, follow this [notebook](../notebooks/03_attention_mechanisms.ipynb)
